@@ -12,6 +12,7 @@ const auth = () => {
   const { isLoading, auth } = usePuterStore();
   const location = useLocation();
   const next = location.search.split("next=")[1];
+  console.log({ next });
   const navigate = useNavigate();
   useEffect(() => {
     if (auth.isAuthenticated) navigate(next);
